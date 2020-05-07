@@ -1,0 +1,140 @@
+﻿<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>PHYSICAL CHEMISTY</title>
+    <link rel="stylesheet" href="css/style login.css">
+</head>
+<body>
+<style>
+    h1 {color: 7f00ff;}
+    p {color: blue;}
+  </style>
+	<!-- end #header -->
+
+				<center>
+					<form action="upload.php" method="post" enctype="multipart/form-data">
+					
+					<div class="login-box">
+					  <h1> Participant Registration </h1>
+					  	  
+					  <div class="textbox">
+						<input type="text" name="username" required placeholder="Participant Name">
+					  </div>
+					  
+					  <div class="textbox">
+					    <input type="list" list="designation" name="designation" placeholder="Status of Participant">
+						  <datalist id="designation">						  
+							<option class="opt" value="PG/M.Phil Scholars">
+							<option class="opt" value="Research/PDF Scholars">
+							<option class="opt" value="Faculty/Scientist">
+							<option class="opt" value="Industrialist">
+							<option class="opt" value="Foreign Participants">
+						  </datalist>
+					  </div>
+					  					  
+					  <div class="textbox">
+					    <input type="list" list="des" name="des" placeholder="Designation">
+						  <datalist id="des">						  
+							<option class="opt" value="Student">
+							<option class="opt" value="Professor">
+						  </datalist>
+					  </div>
+					  
+					  <div class="textbox">
+						<input type="text" name="institution" required placeholder="Institution">
+					  </div>
+					  
+					  <div class="textbox">
+						<input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" required placeholder="Email" placeholder>
+					  </div>
+					  
+						<div class="textbox">
+						<input type="text" name="mobile" maxlength="13"  pattern="[0-9 +]{13}" required placeholder="Mobile">
+					  </div>
+					
+						<div class="textbox">
+						<input type="text" name="address" required placeholder="Address">
+					  </div>
+					  
+					<input type="checkbox" id="myCheck" onclick="myFunction()"> Submit Abstract
+						
+					  <script>
+					  function myFunction() {
+						  // Get the checkbox
+						  var checkBox = document.getElementById("myCheck");
+						  // Get the output text
+						  var text1 = document.getElementById("presenters");
+						  var text2 = document.getElementById("topic");
+						  var text3 = document.getElementById("event");
+						  var text4 = document.getElementById("abstract");
+						  //var text5 = document.getElementById("receipt");
+
+						  // If the checkbox is checked, display the output text
+						  if (checkBox.checked == true){
+							text1.style.display = "block";
+							text2.style.display = "block";
+							text3.style.display = "block";
+							text4.style.display = "block";
+							//text5.style.display = "block";
+						  } else {
+							text1.style.display = "none";
+							text2.style.display = "none";
+							text3.style.display = "none";
+							text4.style.display = "none";
+							//text5.style.display = "none";
+						  }
+						}
+						</script>					  
+					  <div class="textbox" id="presenters" style="display:none">
+						<input  type="text" name="presenter" placeholder="Name of the Presenter">
+					  </div>
+					  
+					  <div class="textbox" id="topic" style="display:none">
+					    <input type="list" list="Topics" name="topics" placeholder="Topics">
+						  <datalist id="Topics">						  
+							<option class="opt" value="Catalysis & Photocatalysis">
+							<option class="opt" value="Green synthesis">
+							<option class="opt" value="Carbon materials">
+							<option class="opt" value="Polymers">
+							<option class="opt" value="Chemical sensors & Biosensors">
+							<option class="opt" value="Supercapacitors">
+							<option class="opt" value="Drug Delivery">
+							<option class="opt" value="Renewable energy & resources">
+							<option class="opt" value="Computational studies">
+							<option class="opt" value="Molecular Modelling">
+							<option class="opt" value="Nanomaterials & Bioimaging Applications">
+							<option class="opt" value="Other Topics">
+						  </datalist>
+					  </div>
+					 
+					  <div class="textbox" id="event" style="display:none">
+					    <input type="list" list="events" name="events" placeholder="Events">
+						  <datalist id="events">						  
+							<option class="opt" value="Oral Presentation">
+							<option class="opt" value="Poster Presentation">
+						  </datalist>
+					  </div>
+
+					  <div class="textbox" style="display:none" id="abstract">
+						Abstract:<input type="file" name="myfile" >
+					  </div>
+
+					  <div class="textbox" id="receipt">
+						Proof of Payment:<input type="file" name="receipt">
+					  </div>
+
+					  <input class="btn" type="submit" name="save" value="Save">
+					 
+					</div>
+				 
+				<div class="login-map">
+				
+		</div>
+		</center>
+
+		
+		<!-- end #content -->
+	<!-- end #footer -->
+</body>
+</html>
